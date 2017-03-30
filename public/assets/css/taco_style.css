@@ -3,7 +3,23 @@ body {
 	background-color: #7abf93;
 }
 
-#slideshow {
+h1, h2, #form, #uneatenTacos, #eatenTacos{
+	text-align: center;
+}
+
+#mainheader {
+	font-family: 'Indie Flower', cursive;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#secondHeader {
+	font-family: 'Indie Flower', cursive;
+	font-size: 40px;
+}
+
+img.mySlides {
+	width: 100%;
 	height: 300px;
 }
 
@@ -14,11 +30,12 @@ body {
 #submitButton {
 	width: 100px;
 	height: 25px;
+	text-align: center;
 }
 
-#eatButton {
-	width: 50px;
-	height: 20px;
+ul {
+	padding-left: 0;
 }
+
 
 
