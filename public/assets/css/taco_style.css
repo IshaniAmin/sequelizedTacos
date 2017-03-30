@@ -3,6 +3,10 @@ body {
 	background-color: #7abf93;
 }
 
+#slideshow {
+	height: 300px;
+}
+
 .container {
 	margin-top: 20px;
 }

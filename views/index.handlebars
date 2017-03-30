@@ -6,7 +6,12 @@
 
     <br>
 
-    <img class="col-md-offset-4" src="/assets/img/burger.jpg" alt="Cartoon Burger" style="width:350px;height:300px;">
+    <div class="w3-content w3-section" style="max-width:500px">
+      <img class="mySlides" src="/assets/img/tacos1.jpg" style="width:100%">
+      <img class="mySlides" src="/assets/img/tacos2.jpg" style="width:100%">
+      <img class="mySlides" src="/assets/img/tacos3.jpg" style="width:100%">
+    </div>
+
 
     <br>
 
@@ -27,7 +32,7 @@
           {{#each tacos}}
             {{#unless this.devoured}}
               <li>
-                {{this.taco}}
+                {{this.name}}
                 
                 <div>
                   <form action="/{{this.id}}?_method=PUT" method="POST">
@@ -48,7 +53,7 @@
           {{#each tacos}}
             {{#if this.devoured}}
               <li>
-                {{this.taco}}
+                {{this.name}}
                 <!-- <form action="/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="devoured" value="false">
                   <button type="submit">UNEAT</button>
