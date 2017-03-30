@@ -30,12 +30,6 @@ app.use("/", tacosController);
 
 var PORT = process.env.PORT || 3000;
 
-// app.listen(PORT, function() {
-//   console.log("App listening on PORT " + PORT);
-// });
-
-Models.sequelize.sync({ force: false }).then(function() {
-  app.listen(PORT, server_host, function() {
-    console.log(`Listening on PORT: ${PORT}`);
-  });
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
 });
