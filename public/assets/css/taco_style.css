@@ -15,7 +15,8 @@ h1, h2, #form, #uneatenTacos, #eatenTacos{
 
 #secondHeader {
 	font-family: 'Indie Flower', cursive;
-	font-size: 40px;
+	font-size: 50px;
+	font-weight: bold;
 }
 
 img.mySlides {
@@ -27,15 +28,23 @@ img.mySlides {
 	margin-top: 20px;
 }
 
-#submitButton {
-	width: 100px;
-	height: 25px;
-	text-align: center;
+.headers {
+	font-size: 40px;
+	font-family: 'Indie Flower', cursive;
+	font-weight: bold;
 }
 
 ul {
 	padding-left: 0;
+	font-size: 25px;
+	font-family: 'Indie Flower', cursive;
+	font-weight: bold;
 }
 
+.btn-primary {
+    color: black;
+    background-color: #A9DABB;
+    border-color: #2e6da4;
+}
 
 

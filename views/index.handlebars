@@ -26,13 +26,13 @@
         <form action="/add" method="POST">
         	<textarea name="taco" placeholder=""></textarea>
           <br>
-        	<input id="submitButton" type="submit"></input>
+        	<input class="btn btn-primary" type="submit"></input>
         </form>
       </div>
     </div>
 
     <div id="uneatenTacos" class="col-md-6">
-      <h3>Ready to Eat Taco!</h3>
+      <h3 class="headers">Ready to Eat Tacos!</h3>
       <hr>
         <ul>
           {{#each tacos}}
@@ -44,7 +44,7 @@
                 <div>
                   <form action="/{{this.id}}?_method=PUT" method="POST">
                     <input type="hidden" name="devoured" value="true">
-                    <button type="submit">EAT!</button>
+                    <button class="btn btn-primary" type="submit">EAT!</button>
                   </form>
                 </div>
 
@@ -56,7 +56,7 @@
     </div>
 
     <div id="eatenTacos" class="col-md-6">
-      <h3>Devoured Tacos</h3>
+      <h3 class="headers">Devoured Tacos!</h3>
       <hr>
         <ul>
           {{#each tacos}}
@@ -66,7 +66,7 @@
                 {{this.name}}
                 <form action="/{{this.id}}?_method=PUT" method="POST">
                   <input type="hidden" name="devoured" value="false">
-                  <button type="submit">UNEAT</button>
+                  <button class="btn btn-primary" type="submit">UNEAT</button>
                 </form>
               </ul>
             </div>
