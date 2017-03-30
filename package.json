@@ -1,0 +1,28 @@
+{
+  "name": "jamaica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArronJLinton/JuicyJerk.git"
+  },
+  "author": "Arron Linton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArronJLinton/JuicyJerk/issues"
+  },
+  "homepage": "https://github.com/ArronJLinton/JuicyJerk#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4",
+    "sequelize-cli": "^2.7.0"
+  }
+}
