@@ -2,15 +2,16 @@ var express = require('express');
 var router = express.Router();
 var models = require('../models');
 
+console.log(models.Taco);
 
 router.get("/", function(req, res) {
   models.Taco.findAll({ 
-    include: [models.Taco]
+    // include: [models.Taco]
   }).then(function(taco) {
-    // var hbsObject = {
-    //   food: data
-    // // };
-    // console.log(food);
+    var hbsObject = {
+      taco: data
+    };
+    console.log(food);
     res.render("index", {taco: taco});
   });
 });
