@@ -23,5 +23,8 @@ var tacosController = require("./controllers/taco_controller.js");
 
 app.use("/", tacosController);
 
-var port = process.env.PORT || 3000;
-app.listen(port);
+var PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function() {
+  console.log("App listening on PORT " + PORT);
+});

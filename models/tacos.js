@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var food = sequelize.define("Taco", {
+  var Taco = sequelize.define("tacos", {
     name: {type: DataTypes.STRING},
     devoured: {type: DataTypes.BOOLEAN, defaultValue: false}
   }, {
@@ -13,5 +13,6 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
-  return food;
+  return Taco;
 };
+

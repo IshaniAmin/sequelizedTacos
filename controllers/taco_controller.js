@@ -1,43 +1,38 @@
 var express = require('express');
 var router = express.Router();
-var taco = require('../models');
+var models = require('../models');
 
 
 router.get("/", function(req, res) {
-  taco.all(function(data) {
-    var hbsObject = {
-      tacos: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
+  models.Taco.findAll({ 
+    include: [models.Taco]
+  }).then(function(taco) {
+    // var hbsObject = {
+    //   food: data
+    // // };
+    // console.log(food);
+    res.render("index", {taco: taco});
   });
 });
 
-
-// router.post("/add"), function(req, res){
-//  burger.add(["burger_name"], [req.body.burger_name], function(response){
-//    res.redirect('/');
-//  })
-//  console.log(res);
-// }
-
-router.post("/add", function(req, res) {
-  taco.add(["id", "taco"], [req.body.id, req.body.taco], function(response){
-    res.redirect("/");
+router.post("/", function(req, res) {
+  models.Taco.create({
+    name: req.body.name
+  }).then(function() {
+    res.redirect('/');
   });
 });
 
 router.put("/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  var condition = req.params.id;
 
-  console.log("condition", condition);
+  // console.log(condition);
 
-  taco.update({
-    devoured: req.body.devoured
-  }, condition, function() {
+  models.Taco.update(
+  {devoured: req.body.devoured},{where: {id: condition}} 
+  ).then(function() {
     res.redirect("/");
   });
 });
-
 
 module.exports = router;
