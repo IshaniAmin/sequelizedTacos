@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArronJLinton/JuicyJerk.git"
+    "url": "git+https://github.com/IshaniAmin/sequelizedTacos.git"
   },
   "author": "Arron Linton",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ArronJLinton/JuicyJerk/issues"
+    "url": "https://github.com/IshaniAmin/sequelizedTacos/issues"
   },
-  "homepage": "https://github.com/ArronJLinton/JuicyJerk#readme",
+  "homepage": "https://github.com/IshaniAmin/sequelizedTacos#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
